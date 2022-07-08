@@ -1,34 +1,26 @@
 
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
-
-// look at this guide https://www.geeksforgeeks.org/solidity-enums-and-structs/#:~:text=Structs%20in%20Solidity%20allows%20you,and%20imported%20in%20another%20contract.
-
-contract Pixel {
-
-     struct Pixel {
-      uint id;
-      string colour;
-   }
-
-     Pixel pixel1= Pixel(1,"G");
- 
-
-function buyPixel() public view
-            returns (bytes32 winnerName_)
-    {
-        
+    
+contract PixelContract {
+    
+    // Declare struct
+    struct Pixel {
+        string color;
+        uint owner;
+    }
+    
+    // Declare array
+    Pixel[] pixelArray;
+    
+    function addPixel(string calldata _color, uint _owner) external {
+    
+       Pixel memory newPixel = Pixel(_color,_owner); // This declaration shadows an existing declaration.
+       pixelArray.push(newPixel); // Member "push" not found or not visible after argument-dependent lookup in struct MyContract.Pixel memory.
+    
     }
 
-function changePixelColor() public view
-            returns (bytes32 winnerName_)
-    {
-        
-    }
+    //Change Pixel 
 
-    function getPixelColor() public view
-            returns (bytes32 winnerName_)
-    {
-        
-    }
-
+    
 }
