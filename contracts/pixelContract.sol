@@ -20,7 +20,8 @@ contract PixelContract {
     
     }
 
-    //Change Pixel 
-
-    
+    //Return Pixels
+    function getItems() external view returns(Pixel[] memory) {
+        return pixelArray;
+    }
 }
