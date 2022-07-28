@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div class="text-lg">Title</div>
+<div class="flex justify-center">
+  <GridComp></GridComp>
+</div>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import GridComp from './components/GridComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    GridComp
   }
 }
 </script>
