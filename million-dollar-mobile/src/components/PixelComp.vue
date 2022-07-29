@@ -1,5 +1,5 @@
 <template>
-<div @click="pixelSelectedStatus = !pixelSelectedStatus" class="p-3 bg-slate-400 border border-black">
+<div @click="pixelSelectedStatus = !pixelSelectedStatus" class="p-3 bg-white border border-black">
 
   <colorSelector v-if="pixelSelectedStatus"></colorSelector>
   

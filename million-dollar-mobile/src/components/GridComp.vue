@@ -1,6 +1,6 @@
 <template>
 <div class="flex flex-wrap row border-4 border-slate max-w-[320px] h-fit">
-  <PixelComp v-for="index in 252" :index="index" :key="index"/>
+  <PixelComp v-for="index in 372" :index="index" :key="index"/>
 </div>
 </template>
 
