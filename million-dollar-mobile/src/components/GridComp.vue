@@ -1,6 +1,7 @@
 <template>
 <div class="flex flex-wrap row border-4 border-slate max-w-[320px] h-fit">
   <PixelComp v-for="index in 372" :index="index" :key="index"/>
+  <!-- Only allow one pixel to be clicked at a time -->
 </div>
 </template>
 
