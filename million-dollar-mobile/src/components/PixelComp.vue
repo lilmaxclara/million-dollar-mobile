@@ -1,5 +1,5 @@
 <template>
-<div @click="pixelSelectedStatus = !pixelSelectedStatus" class="p-3 bg-white border border-black">
+<div @click=pixelSelected class="p-3 bg-white border border-black">
 
   <colorSelector v-if="pixelSelectedStatus"></colorSelector>
   
@@ -17,10 +17,16 @@ export default {
     }
   },
   props: {
-    msg: String
+    isClicked: Boolean
   },
   components: {
     colorSelector
+  },
+  methods:{
+    pixelSelected () {
+      this.pixelSelectedStatus = !this.pixelSelectedStatus
+      this.$emit('clicked', this.pixelSelectedStatus, this.index)
+    }
   }
 }
 </script>

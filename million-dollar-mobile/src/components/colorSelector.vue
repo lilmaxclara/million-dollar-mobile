@@ -1,9 +1,9 @@
 <template>
-  <div class="w-40 h-52 border border-black absolute bg-white">
+  <div class="w-40 absolute bg-slate-200 rounded">
     <!-- Ensure we don't position absolutely off the screen -->
     <div class="flex-col">
-      <div class=" bg-blue-500">Color Picker</div>
-      <div class="flex flex-row bg-slate-200 flex-wrap gap-2 h-fit">
+      <div class=" bg-blue-500 rounded-t text-white font-bold">COLOR</div>
+      <div class="flex flex-row justify-center mt-2 mb-2 bg-slate-200 flex-wrap gap-1 h-fit">
         <div @click="changeColor('blue')" class="w-8 h-8 rounded-full bg-blue-700"></div>
         <div class="w-8 h-8 rounded-full bg-red-600"></div>
         <div class="w-8 h-8 rounded-full bg-purple-600"></div>
